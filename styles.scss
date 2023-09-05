@@ -1,0 +1,100 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+    --primary-color: linear-gradient(to left top, #43CBFF, #9708CC);
+    --black-color: linear-gradient(to right top, #161616 20%, #c7f043 80%);
+    --white-color: #fff;
+    --gray-color: #707070;
+    --grays-color: #333;
+    --purple-color: linear-gradient(to right top, #161616 10%, #6559ec 90%);
+    --green-color: #c9e27a;
+    --purpleV-color: rgb(116, 107, 218);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins","sans-serif";
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+}
+:where(.container, form, .input-field, header) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background: #fff;
+    padding: 30px 65px;
+    border-radius: 12px;
+    row-gap: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    header{
+        height: 65px;
+        width: 65px;
+        background: #4070f4;
+        color: #fff;
+        font-size: 2.5rem;
+        border-radius: 50%;
+    }
+    h4{
+        font-size: 1.25rem;
+        color: #333;
+        font-weight: 500;
+    }
+    form{
+        .input-field{
+            flex-direction: row;
+            column-gap: 10px;
+                input{
+                    height: 45px;
+                    width: 42px;
+                    border-radius: 6px;
+                    outline: none;
+                    font-size: 1.125rem;
+                    text-align: center;
+                    border: 1px solid #ddd;
+                }
+            input::-webkit-inner-spin-button,
+            input::-webkit-outer-spin-button{
+                display: none;
+            }
+        }
+        button{
+            margin-top: 25px;
+            width: 100%;
+            color: #fff;
+            font-size: 1rem;
+            border: none;
+            padding: 9px 0;
+            cursor: pointer;
+            border-radius: 6px;
+            pointer-events: none;
+            background: #6e93f7;
+            transition: all 0.2s ease;
+            &:hover {
+                background: #0e4bf1;
+                pointer-events: none;
+            }
+            &.active {
+                background: #4070f4;
+                pointer-events: auto;
+            }
+        }
+    }
+}
